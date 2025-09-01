@@ -1,22 +1,208 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ansh Chugh</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ansh Chugh — Electrical Engineering @ UBC</title>
+  <meta name="description" content="Ansh Chugh — Electrical Engineering student at UBC (Mechatronics). Projects, skills, and contact." />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Fixed background stage (two layers that crossfade) -->
+  <div class="bg-stage" aria-hidden="true">
+    <!-- Replace these URLs with your own files (e.g., /assets/img/bg-1.jpg and bg-2.jpg) -->
+    <div class="bg-img bg-1" style="background-image:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1920&auto=format&fit=crop');"></div>
+    <div class="bg-img bg-2" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1920&auto=format&fit=crop');"></div>
+  </div>
+
   <header>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/projects.html">Projects</a>
+    <nav class="container" aria-label="Primary">
+      <div class="brand">Ansh Chugh</div>
+      <div class="navlinks">
+        <a href="#top">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#edu">Education & Awards</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
-  <main>
-    <h1>Welcome</h1>
-    <p>This is the homepage of my multi-page portfolio.</p>
+
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="card">
+        <h1 id="intro-title">Electrical Engineering @ UBC</h1>
+        <p class="muted">
+          I like making signals behave and hardware do useful things. Mechatronics option; embedded, controls, power, and DSP.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn secondary" href="#contact">Say Hi</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="tight-top">Quick Facts</h3>
+        <ul class="muted list">
+          <li>Kelowna, BC • UBC Okanagan</li>
+          <li>GPA 89.8% — Dean’s List</li>
+          <li>Co-op available (4 months) starting May 2026</li>
+          <li>Interests: embedded systems, control, signal processing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trigger that switches background to image 2 -->
+    <div id="bg-trigger" class="section tight" aria-hidden="true"></div>
+
+    <!-- SKILLS (colorful chips) -->
+    <section id="skills" class="section tight" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills (stuff I can wire up without tripping a breaker)</h2>
+      <div class="tag-groups">
+        <div class="tag-row">
+          <span class="group">Core</span>
+          <span class="tag" data-c="cyan">C / C++</span>
+          <span class="tag" data-c="blue">Python</span>
+          <span class="tag" data-c="amber">MATLAB / Simulink</span>
+          <span class="tag" data-c="violet">HTML / CSS</span>
+          <span class="tag" data-c="lime">Git / GitHub</span>
+        </div>
+        <div class="tag-row">
+          <span class="group">Electronics</span>
+          <span class="tag" data-c="lime">Circuit Design / Components</span>
+          <span class="tag" data-c="cyan">Arduino / STM32</span>
+          <span class="tag" data-c="amber">LTspice</span>
+          <span class="tag" data-c="magenta">Soldering</span>
+          <span class="tag" data-c="blue">Basic Circuit Tools</span>
+          <span class="tag" data-c="violet">KiCad (PCB basics)</span>
+        </div>
+        <div class="tag-row">
+          <span class="group">Tools & Docs</span>
+          <span class="tag" data-c="blue">Microsoft Office</span>
+          <span class="tag" data-c="amber">Technical Report Writing</span>
+          <span class="tag" data-c="cyan">Project Reporting & Deliverables</span>
+          <span class="tag" data-c="violet">AutoCAD / SolidWorks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Project Highlights</h2>
+      <div class="grid cols-3">
+        <article class="card project">
+          <h3>The Matcha Mobile — 1:7 Modular e-Bike</h3>
+          <p class="muted">Led electrical sub-team; Arduino-based control powering servo & gear motors.</p>
+          <p class="stack">SolidWorks (housing & routing) • Soldering • Arduino</p>
+          <p><a href="#">Demo</a> · <a href="#">Code</a></p>
+        </article>
+        <article class="card project">
+          <h3>Personal Portfolio Website</h3>
+          <p class="muted">Accessible, responsive site to showcase projects and skills.</p>
+          <p class="stack">HTML • CSS • GitHub Pages</p>
+          <p><a href="#">Live</a> · <a href="#">Repo</a></p>
+        </article>
+        <article class="card project">
+          <h3>EE Mini-Builds (Ongoing)</h3>
+          <p class="muted">Small experiments (PWM dimmer, PID motor control, buck sim) with measurements.</p>
+          <p class="stack">C / STM32 • LTspice • MATLAB</p>
+          <p><a href="#">Notes</a> · <a href="#">Code</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section tight" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Engineering Intern — Prince Rupert Port Authority</h3>
+          <p class="muted tight-top">Prince Rupert, BC · Jun–Aug 2025</p>
+          <ul class="muted list">
+            <li>Supported the $700M+ Ridley Island Export Logistics Project (RIELP).</li>
+            <li>Produced daily construction progress reports from site inspections & toolbox meetings.</li>
+            <li>Created AutoCAD berm designs from LiDAR, including volume & cost estimates.</li>
+            <li>Authored project docs and a closing report shared with internal & external stakeholders.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Founder / Instructor — Skeena Tutoring</h3>
+          <p class="muted tight-top">Prince Rupert, BC · Jun 2024–Present</p>
+          <ul class="muted list">
+            <li>Built a student-run tutoring initiative (“Students Helping Students”).</li>
+            <li>Managed website, scheduling, payments; delivered 250+ hours of math/science tutoring.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION & AWARDS -->
+    <section id="edu" class="section tight" aria-labelledby="edu-title">
+      <h2 id="edu-title">Education & Awards</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3 class="tight-top">B.A.Sc. Electrical Engineering (Mechatronics)</h3>
+          <p class="muted tight-top">University of British Columbia — Kelowna, BC</p>
+          <ul class="muted list">
+            <li>Expected Graduation: May 2028</li>
+            <li>GPA 89.8% — Dean’s List</li>
+            <li>Co-op available starting May 2026 (4 months)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="tight-top">Awards</h3>
+          <ul class="muted list">
+            <li>Governor General’s Bronze Medal (2025)</li>
+            <li>Deputy Vice-Chancellor Scholarship, UBC (2025)</li>
+            <li>City of Prince Rupert Top Academic Award (2024)</li>
+            <li>Valedictorian, Charles Hays Secondary School (2024)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section tight" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="card">
+        <ul class="muted list">
+          <li>Email: <a href="mailto:ansh0chugh@gmail.com">ansh0chugh@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/ansh-chugh" target="_blank" rel="noopener">/in/ansh-chugh</a></li>
+          <li>GitHub: <a href="https://github.com/achugh05" target="_blank" rel="noopener">@achugh05</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
+
+  <footer class="container">
+    <small class="muted">© <span id="y"></span> Ansh Chugh — Built for GitHub Pages</small>
+  </footer>
+
+  <script>
+    // Year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Background crossfade when the sentinel enters the viewport
+    const trigger = document.getElementById('bg-trigger');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) document.body.classList.add('show-bg2');
+        else document.body.classList.remove('show-bg2');
+      });
+    }, { root: null, threshold: 0.15, rootMargin: '0px 0px -40% 0px' });
+    io.observe(trigger);
+  </script>
+
+  <!-- Image notes:
+       - Swap the two background image URLs at the top for your photos
+       - Or place files at /assets/img/bg-1.jpg and /assets/img/bg-2.jpg and use those paths
+       - Keep this page short; deeper case studies can go on a /projects page later
+  -->
 </body>
 </html>
+

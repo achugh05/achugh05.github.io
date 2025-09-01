@@ -1,11 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ansh Chugh — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name: projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --bg-elev: #111216;
+      --text: #e6e6e6;
+      --muted: #a9b0b8;
+      --accent: #6ee7ff;
+      --accent-2: #9b8cff;
+      --card: #14161c;
+      --border: #232635;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f7fafc;
+        --bg-elev: #ffffff;
+        --text: #0d1321;
+        --muted: #4f5662;
+        --accent: #0077ff;
+        --accent-2: #8a5cff;
+        --card: #ffffff;
+        --border: #e6eaf0;
+        --shadow: 0 8px 24px rgba(0,0,0,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+    header{position:sticky;top:0;background:linear-gradient(to bottom,var(--bg-elev),rgba(0,0,0,0));backdrop-filter:saturate(180%) blur(8px);z-index:999}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid var(--border)}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .brand a{color:var(--text);text-decoration:none}
+    .navlinks{display:flex;gap:1rem}
+    .navlinks a{color:var(--text);opacity:.9}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;padding:6rem 0}
+    .hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:.2rem 0 1rem}
+    .hero p{font-size:1.075rem;color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:.8rem;margin-top:1.25rem}
+    .btn{display:inline-block;background:var(--accent);color:#00131f;font-weight:700;padding:.8rem 1rem;border-radius:.75rem;border:1px solid transparent;box-shadow:var(--shadow)}
+    .btn.secondary{background:transparent;color:var(--text);border-color:var(--border)}
+
+    /* Cards */
+    .section{padding:3.5rem 0}
+    .section h2{font-size:1.75rem;margin:0 0 1.25rem}
+    .grid{display:grid;gap:1.25rem}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
+    }
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.1rem;box-shadow:var(--shadow)}
+    .card h3{margin:.2rem 0 .4rem;font-size:1.1rem}
+    .card p{margin:.2rem 0;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+    .tag{border:1px solid var(--border);padding:.25rem .5rem;border-radius:999px;font-size:.8rem;color:var(--muted)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border);padding:2rem 0;margin-top:3rem;color:var(--muted)}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+    .kbd{border:1px solid var(--border);border-bottom-width:2px;border-radius:.5rem;padding:.15rem .35rem;font-size:.85rem}
+    .avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--border)}
+    .pill{display:inline-block;padding:.35rem .6rem;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#00131f;font-weight:800;letter-spacing:.3px}
+  </style>
 </head>
 <body>
-    
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><a href="#top">Your Name</a></div>
+        <div class="navlinks" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="mono" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="intro-title">
+      <div>
+        <span class="pill" aria-hidden="true">Hello!</span>
+        <h1 id="intro-title">I build useful things for the web.</h1>
+        <p>
+          I’m <strong>Your Name</strong>, a developer who enjoys turning ideas into clean, accessible, and fast user experiences. I focus on
+          HTML, CSS, and just‑enough JavaScript. Below are a few projects and ways to reach me.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn secondary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <div style="justify-self:center">
+        <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=600&auto=format&fit=crop" alt="Portrait placeholder" />
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>Concise one‑liner explaining what this does and who it helps.</p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Accessibility</span>
+          </div>
+          <p><a href="#" aria-label="Project One live demo">Live</a> · <a href="#" aria-label="Project One source code on GitHub">Code</a></p>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Key outcome or metric (e.g., <em>reduced page weight by 40%</em>).</p>
+          <div class="tags">
+            <span class="tag">Responsive</span><span class="tag">Performance</span>
+          </div>
+          <p><a href="#">Live</a> · <a href="#">Code</a></p>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>What problem did you solve? Keep it simple and scannable.</p>
+          <div class="tags">
+            <span class="tag">UI</span><span class="tag">UX</span>
+          </div>
+          <p><a href="#">Live</a> · <a href="#">Code</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>What I’m into</h3>
+          <p>
+            Front‑end craftsmanship, accessible design, and clear systems thinking. I like building things that feel effortless.
+          </p>
+          <div class="tags"><span class="tag">Semantic HTML</span><span class="tag">Modern CSS</span><span class="tag">Web Perf</span></div>
+        </div>
+        <div class="card">
+          <h3>Skills</h3>
+          <p class="mono">HTML · CSS · Vanilla JS · Git · GitHub · CLI basics</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="card">
+        <p>Best way to reach me is email. I also hang out here:</p>
+        <ul>
+          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+          <li>GitHub: <a href="https://github.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">/in/yourhandle</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+        <small>© <span id="y"></span> Your Name</small>
+        <small class="muted">Built with HTML & CSS • Hosted on GitHub Pages</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear()
+  </script>
 </body>
 </html>

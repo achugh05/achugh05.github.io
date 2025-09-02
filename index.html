@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ansh Chugh — Electrical Engineering @ UBC</title>
+  <title>Ansh Chugh</title>
   <meta name="description" content="Ansh Chugh — Electrical Engineering student at UBC (Mechatronics). Projects, skills, and contact." />
-  <link rel="stylesheet" href="/resources/css/style.css" />
+  <link rel="stylesheet" href="resources/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
   <!-- Fixed background stage (two layers that crossfade) -->
   <div class="bg-stage" aria-hidden="true">
     <!-- Replace these URLs with your own files (e.g., /assets/img/bg-1.jpg and bg-2.jpg) -->
-    <div class="bg-img bg-1" style="background-image:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1920&auto=format&fit=crop');"></div>
-    <div class="bg-img bg-2" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1920&auto=format&fit=crop');"></div>
+    <div class="bg-img bg-1" style="background-image:url('resources/images/banner_photo_1.jpg');"></div>
+    <div class="bg-img bg-2" style="background-image:url('resources/images/banner_photo_2.jpg');"></div>
   </div>
 
   <header>
@@ -33,19 +33,19 @@
   </header>
 
   <main id="top" class="container">
-    <!-- HERO -->
+    <!-- Hi My Name Is... -->
     <section class="hero" aria-labelledby="intro-title">
       <div class="card">
-        <h1 id="intro-title">Electrical Engineering @ UBC</h1>
+        <h1 id="intro-title">Welcome to Ansh's World</h1>
         <p class="muted">
-          I like making signals behave and hardware do useful things. Mechatronics option; embedded, controls, power, and DSP.
+          I am a second year electrical engineering student @ UBC from a small town on the west coast of British Columbia called Prince Rupert.
         </p>
         <div class="cta">
-          <a class="btn" href="#projects">See Projects</a>
-          <a class="btn secondary" href="#contact">Say Hi</a>
+          <a class="btn" href="#projects">See My Skills/Experience</a>
+          <a class="btn secondary" href="#contact">Learn More About Me</a>
         </div>
       </div>
-      <div class="card">
+      <!-- <div class="card">
         <h3 class="tight-top">Quick Facts</h3>
         <ul class="muted list">
           <li>Kelowna, BC • UBC Okanagan</li>
@@ -53,7 +53,7 @@
           <li>Co-op available (4 months) starting May 2026</li>
           <li>Interests: embedded systems, control, signal processing</li>
         </ul>
-      </div>
+      </div> -->
     </section>
 
     <!-- Trigger that switches background to image 2 -->
@@ -61,24 +61,24 @@
 
     <!-- SKILLS (colorful chips) -->
     <section id="skills" class="section tight" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills (stuff I can wire up without tripping a breaker)</h2>
+      <h2 id="skills-title">Skills</h2>
       <div class="tag-groups">
         <div class="tag-row">
-          <span class="group">Core</span>
+          <span class="group">Programming</span>
           <span class="tag" data-c="cyan">C / C++</span>
           <span class="tag" data-c="blue">Python</span>
-          <span class="tag" data-c="amber">MATLAB / Simulink</span>
+          <!-- <span class="tag" data-c="amber">MATLAB / Simulink</span> -->
           <span class="tag" data-c="violet">HTML / CSS</span>
           <span class="tag" data-c="lime">Git / GitHub</span>
         </div>
         <div class="tag-row">
           <span class="group">Electronics</span>
           <span class="tag" data-c="lime">Circuit Design / Components</span>
-          <span class="tag" data-c="cyan">Arduino / STM32</span>
-          <span class="tag" data-c="amber">LTspice</span>
+          <span class="tag" data-c="cyan">Arduino</span>
+          <!-- <span class="tag" data-c="amber">LTspice</span> -->
           <span class="tag" data-c="magenta">Soldering</span>
           <span class="tag" data-c="blue">Basic Circuit Tools</span>
-          <span class="tag" data-c="violet">KiCad (PCB basics)</span>
+          <!-- <span class="tag" data-c="violet">KiCad (PCB basics)</span> -->
         </div>
         <div class="tag-row">
           <span class="group">Tools & Docs</span>
@@ -98,7 +98,22 @@
           <h3>The Matcha Mobile — 1:7 Modular e-Bike</h3>
           <p class="muted">Led electrical sub-team; Arduino-based control powering servo & gear motors.</p>
           <p class="stack">SolidWorks (housing & routing) • Soldering • Arduino</p>
-          <p><a href="#">Demo</a> · <a href="#">Code</a></p>
+        
+          <div class="links">
+            <a href="https://youtu.be/DWdrlbyL8is?si=DoteexXZsnupRHnN" target="_blank" rel="noopener">Video</a>
+            <span aria-hidden="true">·</span>
+            <details class="gallery"><summary>Image Gallery</summary></details>
+          </div>
+
+            <div class="gallery-flex">
+                <img src="assets/img/matcha-1.jpg" alt="Frame and drivetrain" loading="lazy">
+                <img src="assets/img/matcha-2.jpg" alt="Electronics bay" loading="lazy">
+                <img src="assets/img/matcha-3.jpg" alt="Wiring and control" loading="lazy">
+                <img src="assets/img/matcha-4.jpg" alt="Exploded view" loading="lazy">
+            </div>
+
+
+
         </article>
         <article class="card project">
           <h3>Personal Portfolio Website</h3>
@@ -106,12 +121,12 @@
           <p class="stack">HTML • CSS • GitHub Pages</p>
           <p><a href="#">Live</a> · <a href="#">Repo</a></p>
         </article>
-        <article class="card project">
+        <!-- <article class="card project">
           <h3>EE Mini-Builds (Ongoing)</h3>
           <p class="muted">Small experiments (PWM dimmer, PID motor control, buck sim) with measurements.</p>
           <p class="stack">C / STM32 • LTspice • MATLAB</p>
           <p><a href="#">Notes</a> · <a href="#">Code</a></p>
-        </article>
+        </article> -->
       </div>
     </section>
 
@@ -173,36 +188,94 @@
         <ul class="muted list">
           <li>Email: <a href="mailto:ansh0chugh@gmail.com">ansh0chugh@gmail.com</a></li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/ansh-chugh" target="_blank" rel="noopener">/in/ansh-chugh</a></li>
-          <li>GitHub: <a href="https://github.com/achugh05" target="_blank" rel="noopener">@achugh05</a></li>
+          <!-- <li>GitHub: <a href="https://github.com/achugh05" target="_blank" rel="noopener">@achugh05</a></li> -->
         </ul>
       </div>
     </section>
   </main>
 
   <footer class="container">
-    <small class="muted">© <span id="y"></span> Ansh Chugh — Built for GitHub Pages</small>
+    <small class="muted">© <span id="y"></span> Ansh Chugh — This Website was built from scratch by Ansh Chugh and deployed using GitHub</small>
   </footer>
 
   <script>
-    // Year stamp
-    document.getElementById('y').textContent = new Date().getFullYear();
+/*
+  Solid background switcher:
+  - Anchors the switch near the #projects section (half a viewport before it)
+  - Enforces a minimum scroll distance so BG2 never shows at the very top
+  - Adds hysteresis (buffer) to stop flapping on small screens / mobile URL bars
+*/
+(function () {
+  const body   = document.body;
+  const target = document.getElementById('projects') 
+              || document.getElementById('skills') 
+              || document.querySelector('.section'); // graceful fallback
+  if (!target) return; // no sections? do nothing
 
-    // Background crossfade when the sentinel enters the viewport
-    const trigger = document.getElementById('bg-trigger');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) document.body.classList.add('show-bg2');
-        else document.body.classList.remove('show-bg2');
-      });
-    }, { root: null, threshold: 0.15, rootMargin: '0px 0px -40% 0px' });
-    io.observe(trigger);
-  </script>
+  // Tunables
+  const HYSTERESIS_PX = 80;   // buffer to prevent flicker
+  const MIN_SCROLL_PX = 200;  // must scroll at least this far before BG2 allowed
 
-  <!-- Image notes:
-       - Swap the two background image URLs at the top for your photos
-       - Or place files at /assets/img/bg-1.jpg and /assets/img/bg-2.jpg and use those paths
-       - Keep this page short; deeper case studies can go on a /projects page later
-  -->
+  let switchY = Infinity;
+  let rafId;
+
+  // Safer viewport height on mobile (handles URL bar show/hide better)
+  function viewH() {
+    return (window.visualViewport && window.visualViewport.height)
+      ? window.visualViewport.height
+      : (window.innerHeight || document.documentElement.clientHeight || 0);
+  }
+
+  function computeSwitchY() {
+    const top = target.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
+    // Switch when the top of the target is ~half a viewport away,
+    // but never earlier than MIN_SCROLL_PX
+    switchY = Math.max(top - viewH() * 0.5, MIN_SCROLL_PX);
+  }
+
+  function tick() {
+    const y = window.scrollY || window.pageYOffset || 0;
+    const isOn = body.classList.contains('show-bg2');
+
+    if (!isOn && y > switchY + HYSTERESIS_PX) {
+      body.classList.add('show-bg2');
+    } else if (isOn && y < switchY - HYSTERESIS_PX) {
+      body.classList.remove('show-bg2');
+    }
+  }
+
+  function scheduleTick() {
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function init() {
+    // Force BG1 at first paint so it never starts on BG2
+    body.classList.remove('show-bg2');
+
+    computeSwitchY();
+    scheduleTick();
+
+    // Recompute after layout settles (fonts/images/mobile URL bar)
+    setTimeout(() => { computeSwitchY(); scheduleTick(); }, 250);
+    setTimeout(() => { computeSwitchY(); scheduleTick(); }, 800);
+
+    document.addEventListener('scroll', scheduleTick, { passive: true });
+    window.addEventListener('resize', () => { computeSwitchY(); scheduleTick(); });
+    window.addEventListener('orientationchange', () => { computeSwitchY(); scheduleTick(); });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () => { computeSwitchY(); scheduleTick(); });
+    }
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    init();
+  } else {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  }
+})();
+    </script>
+
 </body>
 </html>
 

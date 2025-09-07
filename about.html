@@ -1,0 +1,354 @@
+<!--Brainstorm: So you open the page and it says hobbies or whatver and a short couple sentences, 
+anyways, my idea was that as you scroll, the background image changes over and over depending on the section you are in,
+and the background image is relevant to the section you are in for example image of me drumming in section about drumming
+image of me pianoing in section about me piano etc
+things to have on this page: drumming, piano, guitar (somehow), composition section, perhaps awards, grad?, valedictorian? -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ansh Chugh</title>
+  <meta name="description" content="Ansh Chugh — Electrical Engineering student at UBC (Mechatronics). Projects, skills, and contact." />
+  <link rel="stylesheet" href="resources/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fixed background stage (two layers that crossfade) -->
+  <div class="bg-stage" aria-hidden="true">
+    <!-- Replace these URLs with your own files (e.g., /assets/img/bg-1.jpg and bg-2.jpg) -->
+    <div class="bg-img bg-1" style="background-image:url('resources/images/banner_photo_1.jpg');"></div>
+    <div class="bg-img bg-2" style="background-image:url('resources/images/banner_photo_2.jpg');"></div>
+  </div>
+
+  <header>
+    <nav class="container" aria-label="Primary">
+      <div class="brand">Ansh Chugh</div>
+      <div class="navlinks">
+        <a href="#top">Home</a>
+        <a href="#ansh-resume">Resume</a>
+        <!-- <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#edu">Education & Awards</a> -->
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hi My Name Is... -->
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="card">
+        <h1 id="intro-title">Welcome to Ansh's World</h1>
+        <p class="muted">
+          I am a second year electrical engineering student @ UBC from a small town on the west coast of British Columbia called Prince Rupert.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#ansh-resume">See My Resume</a>
+          <a class="btn secondary" href="#contact">About Me</a>
+        </div>
+      </div>
+      <!-- <div class="card">
+        <h3 class="tight-top">Quick Facts</h3>
+        <ul class="muted list">
+          <li>Kelowna, BC • UBC Okanagan</li>
+          <li>GPA 89.8% — Dean’s List</li>
+          <li>Co-op available (4 months) starting May 2026</li>
+          <li>Interests: embedded systems, control, signal processing</li>
+        </ul>
+      </div> -->
+    </section>
+
+    <!-- Trigger that switches background to image 2 -->
+    <div id="bg-trigger" class="section tight" aria-hidden="true"></div>
+
+    <!-- Resume Title  -->
+    <section id="resume-title" class="section tight" aria-labelledby="ansh-resume">
+      <div class="card">
+        <h1 id="ansh-resume">My Resume</h1>
+      </div>
+    </section>
+    
+    <!-- SKILLS (colorful chips) -->
+    <section id="skills" class="section tight" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="tag-groups">
+        <div class="tag-row">
+          <span class="group">Programming</span>
+          <span class="tag" data-c="cyan">C / C++</span>
+          <span class="tag" data-c="blue">Python</span>
+          <!-- <span class="tag" data-c="amber">MATLAB / Simulink</span> -->
+          <span class="tag" data-c="violet">HTML / CSS</span>
+          <span class="tag" data-c="lime">Git / GitHub</span>
+        </div>
+        <div class="tag-row">
+          <span class="group">Electronics</span>
+          <span class="tag" data-c="lime">Circuit Design / Components</span>
+          <span class="tag" data-c="cyan">Arduino</span>
+          <!-- <span class="tag" data-c="amber">LTspice</span> -->
+          <span class="tag" data-c="magenta">Soldering</span>
+          <span class="tag" data-c="blue">Basic Circuit Tools</span>
+          <!-- <span class="tag" data-c="violet">KiCad (PCB basics)</span> -->
+        </div>
+        <div class="tag-row">
+          <span class="group">Tools & Docs</span>
+          <span class="tag" data-c="blue">Microsoft Office</span>
+          <span class="tag" data-c="amber">Technical Report Writing</span>
+          <span class="tag" data-c="cyan">Project Reporting & Deliverables</span>
+          <span class="tag" data-c="violet">AutoCAD / SolidWorks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Project Highlights</h2>
+      <div class="grid cols-3">
+        <article class="card project">
+          <h3>The Matcha Mobile — 1:7 Modular e-Bike</h3>
+          <p class="muted">Led electrical sub-team; Arduino-based control powering servo & gear motors; Circuit Design: 3D Modelling. </p>
+          <p class="stack">SolidWorks • Soldering • Arduino</p>
+        
+          <div class="links">
+            <a href="https://youtu.be/DWdrlbyL8is?si=DoteexXZsnupRHnN" target="_blank" rel="noopener">Video</a>
+             <span aria-hidden="true">·</span>
+              <!-- Button that toggles the gallery -->
+              <button class="link-btn gallery-toggle" type="button" aria-expanded="false"aria-controls="gallery-matcha">
+                Images
+              </button>
+          </div>
+        </article>
+        
+        <article class="card project">
+          <h3>Personal Portfolio Website</h3>
+          <p class="muted">Coded and deployed an accessible, responsive site to showcase projects, skills, and personality.</p>
+          <p class="stack">HTML • CSS • GitHub Pages</p>
+          <!-- <p><a href="#">Live</a> · <a href="#">Repo</a></p> -->
+        </article>
+        <!-- gallery card -->
+        <div class="card gallery-card is-hidden" id="gallery-matcha" role="region">
+          <div class="gallery-grid">
+            <img src="resources/images/matcha/scenic_photo_1.jpg" alt="scenic project image" loading="lazy">
+            <img src="resources/images/matcha/scenic_photo_2.jpg" alt="scenic project image 2" loading="lazy">
+            <img src="resources/images/matcha/internals.jpg" alt="internals and battery" loading="lazy">
+            <img src="resources/images/matcha/circuit.jpg" alt="circuit design" loading="lazy">
+          </div>
+        </div>
+        <!-- <article class="card project">
+          <h3>EE Mini-Builds (Ongoing)</h3>
+          <p class="muted">Small experiments (PWM dimmer, PID motor control, buck sim) with measurements.</p>
+          <p class="stack">C / STM32 • LTspice • MATLAB</p>
+          <p><a href="#">Notes</a> · <a href="#">Code</a></p>
+        </article> -->
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section tight" aria-labelledby="exp-title">
+      <h2 id="exp-title">Work Experience</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Engineering Intern — Prince Rupert Port Authority</h3>
+          <p class="muted tight-top">Prince Rupert, BC · Jun–Aug 2025</p>
+          <ul class="muted list">
+            <li>Supported the $700M+ Ridley Island Export Logistics Project (RIELP).</li>
+            <li>Produced daily construction progress reports from site inspections & toolbox meetings.</li>
+            <li>Created AutoCAD berm designs from LiDAR, including volume & cost estimates.</li>
+            <li>Authored project docs and a closing report shared with internal & external stakeholders.</li>
+          </ul>
+          <div class="links">
+            <a class="link-btn" href="rielp.html" target="_blank" rel="noopener">
+              AutoCad
+            </a>
+            <span aria-hidden="true">·</span>
+            <button class="link-btn gallery-toggle" type="button" aria-expanded="false"aria-controls="gallery-rielp">
+              Images
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Founder / Instructor — Skeena Tutoring</h3>
+          <p class="muted tight-top">Prince Rupert, BC · Jun 2024–Present</p>
+          <ul class="muted list">
+            <li>Built a student-run tutoring initiative to address the lack of academic support in the small community of Prince Rupert.</li>
+            <li>Managed website, scheduling, payments; delivered 250+ hours of math/science tutoring.</li>
+            <li>Designed and maintained a website and social media presence, promoting "Students Helping Students."</li>
+          </ul>
+          <div class="links" id="skeena">
+            <a href="https://skeenatutoring.com" target="_blank" rel="noopener">Website</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.facebook.com/p/Skeena-Tutoring-100094177103720" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </article>
+
+        <div class="card gallery-card is-hidden" id="gallery-rielp" role="region">
+          <div class="gallery-grid">
+            <img src="resources/images/rielp/site_headshot.jpg" alt="headshot of ansh on RIELP site" loading="lazy">
+            <img src="resources/images/rielp/rielp_scenic_2.jpg" alt="scenic project image" loading="lazy">
+            <img src="resources/images/rielp/rielp_scenic.JPG" alt="scenic project image " loading="lazy">
+            <img src="resources/images/rielp/site_a.JPG" alt="structure A" loading="lazy">
+            <img src="resources/images/rielp/site_c.JPG" alt="structure C" loading="lazy">
+            <img src="resources/images/rielp/site_intertidal.jpeg" alt="intertidal salt marsh" loading="lazy">
+            <img src="resources/images/rielp/site_watermain.JPG" alt="watermain" loading="lazy">
+            <img src="resources/images/rielp/site_drainage.JPG" alt="drainage pipe" loading="lazy">
+            <img src="resources/images/rielp/site_drill.JPG" alt="rock breaker" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & AWARDS -->
+    <section id="edu" class="section tight" aria-labelledby="edu-title">
+      <h2 id="edu-title">Education & Awards</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3 class="tight-top">B.A.Sc. Electrical Engineering (Mechatronics)</h3>
+          <p class="muted tight-top">University of British Columbia — Kelowna, BC</p>
+          <ul class="muted list">
+            <li>Expected Graduation: May 2028</li>
+            <li>GPA 89.8% — Dean’s List</li>
+            <li>Co-op available starting May 2026 (4 months)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="tight-top">Awards</h3>
+          <ul class="muted list">
+            <li>Governor General’s Bronze Medal (2025)</li>
+            <li>Deputy Vice-Chancellor Scholarship, UBC (2025)</li>
+            <li>City of Prince Rupert Top Academic Award (2024)</li>
+            <li>Valedictorian, Charles Hays Secondary School (2024)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="download-center" class="container" aria-labelledby="download-link">
+      <a id="download-link" class="btn" href="resources/files/Resume-Ansh-Chugh-2025.docx" download="Ansh-Chugh-Resume.docx">Download My Resume</a>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="section tight" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="card">
+        <ul class="muted list">
+          <li>Email: <a href="mailto:ansh0chugh@gmail.com">ansh0chugh@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/ansh-chugh" target="_blank" rel="noopener">/in/ansh-chugh</a></li>
+          <!-- <li>GitHub: <a href="https://github.com/achugh05" target="_blank" rel="noopener">@achugh05</a></li> -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small class="muted">© <span id="y"></span> Ansh Chugh — This Website was built from scratch by Ansh Chugh and deployed using GitHub</small>
+  </footer>
+
+<script>
+/*
+  Solid background switcher:
+  - Anchors the switch near the #projects section (half a viewport before it)
+  - Enforces a minimum scroll distance so BG2 never shows at the very top
+  - Adds hysteresis (buffer) to stop flapping on small screens / mobile URL bars
+*/
+(function () {
+  const body   = document.body;
+  const target = document.getElementById('projects') 
+              || document.getElementById('skills') 
+              || document.querySelector('.section'); // graceful fallback
+  if (!target) return; // no sections? do nothing
+
+  // Tunables
+  const HYSTERESIS_PX = 80;   // buffer to prevent flicker
+  const MIN_SCROLL_PX = 200;  // must scroll at least this far before BG2 allowed
+
+  let switchY = Infinity;
+  let rafId;
+
+  // Safer viewport height on mobile (handles URL bar show/hide better)
+  function viewH() {
+    return (window.visualViewport && window.visualViewport.height)
+      ? window.visualViewport.height
+      : (window.innerHeight || document.documentElement.clientHeight || 0);
+  }
+
+  function computeSwitchY() {
+    const top = target.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
+    // Switch when the top of the target is ~half a viewport away,
+    // but never earlier than MIN_SCROLL_PX
+    switchY = Math.max(top - viewH() * 0.65, MIN_SCROLL_PX);
+  }
+
+  function tick() {
+    const y = window.scrollY || window.pageYOffset || 0;
+    const isOn = body.classList.contains('show-bg2');
+
+    if (!isOn && y > switchY + HYSTERESIS_PX) {
+      body.classList.add('show-bg2');
+    } else if (isOn && y < switchY - HYSTERESIS_PX) {
+      body.classList.remove('show-bg2');
+    }
+  }
+
+  function scheduleTick() {
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function init() {
+    // Force BG1 at first paint so it never starts on BG2
+    body.classList.remove('show-bg2');
+
+    computeSwitchY();
+    scheduleTick();
+
+    // Recompute after layout settles (fonts/images/mobile URL bar)
+    setTimeout(() => { computeSwitchY(); scheduleTick(); }, 250);
+    setTimeout(() => { computeSwitchY(); scheduleTick(); }, 800);
+
+    document.addEventListener('scroll', scheduleTick, { passive: true });
+    window.addEventListener('resize', () => { computeSwitchY(); scheduleTick(); });
+    window.addEventListener('orientationchange', () => { computeSwitchY(); scheduleTick(); });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () => { computeSwitchY(); scheduleTick(); });
+    }
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    init();
+  } else {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  }
+})();
+
+  // Toggle any gallery panel opened by a .gallery-toggle button
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.gallery-toggle');
+    if (!btn) return;
+
+    const panelId = btn.getAttribute('aria-controls');
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    // If you want only one open at a time, close others:
+    document.querySelectorAll('.gallery-toggle[aria-expanded="true"]').forEach(otherBtn => {
+      if (otherBtn !== btn) {
+        const otherPanel = document.getElementById(otherBtn.getAttribute('aria-controls'));
+        if (otherPanel) otherPanel.classList.add('is-hidden');
+        otherBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Toggle this one
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    panel.classList.toggle('is-hidden', isOpen);
+
+  });
+
+</script>
+
+</body>
+</html>

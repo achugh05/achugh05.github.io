@@ -23,10 +23,10 @@
       <div class="brand">Ansh Chugh</div>
       <div class="navlinks">
         <a href="#top">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#ansh-resume">Resume</a>
+        <!-- <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#edu">Education & Awards</a>
+        <a href="#edu">Education & Awards</a> -->
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -41,8 +41,8 @@
           I am a second year electrical engineering student @ UBC from a small town on the west coast of British Columbia called Prince Rupert.
         </p>
         <div class="cta">
-          <a class="btn" href="#projects">See My Skills/Experience</a>
-          <a class="btn secondary" href="#contact">Learn More About Me</a>
+          <a class="btn" href="#ansh-resume">See My Resume</a>
+          <a class="btn secondary" href="#contact">About Me</a>
         </div>
       </div>
       <!-- <div class="card">
@@ -59,6 +59,13 @@
     <!-- Trigger that switches background to image 2 -->
     <div id="bg-trigger" class="section tight" aria-hidden="true"></div>
 
+    <!-- Resume Title  -->
+    <section id="resume-title" class="section tight" aria-labelledby="ansh-resume">
+      <div class="card">
+        <h1 id="ansh-resume">My Resume</h1>
+      </div>
+    </section>
+    
     <!-- SKILLS (colorful chips) -->
     <section id="skills" class="section tight" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills</h2>
@@ -96,31 +103,34 @@
       <div class="grid cols-3">
         <article class="card project">
           <h3>The Matcha Mobile — 1:7 Modular e-Bike</h3>
-          <p class="muted">Led electrical sub-team; Arduino-based control powering servo & gear motors.</p>
-          <p class="stack">SolidWorks (housing & routing) • Soldering • Arduino</p>
+          <p class="muted">Led electrical sub-team; Arduino-based control powering servo & gear motors; Circuit Design: 3D Modelling. </p>
+          <p class="stack">SolidWorks • Soldering • Arduino</p>
         
           <div class="links">
             <a href="https://youtu.be/DWdrlbyL8is?si=DoteexXZsnupRHnN" target="_blank" rel="noopener">Video</a>
-            <span aria-hidden="true">·</span>
-            <details class="gallery"><summary>Image Gallery</summary></details>
+             <span aria-hidden="true">·</span>
+              <!-- Button that toggles the gallery -->
+              <button class="link-btn gallery-toggle" type="button" aria-expanded="false"aria-controls="gallery-matcha">
+                Images
+              </button>
           </div>
-
-            <div class="gallery-flex">
-                <img src="assets/img/matcha-1.jpg" alt="Frame and drivetrain" loading="lazy">
-                <img src="assets/img/matcha-2.jpg" alt="Electronics bay" loading="lazy">
-                <img src="assets/img/matcha-3.jpg" alt="Wiring and control" loading="lazy">
-                <img src="assets/img/matcha-4.jpg" alt="Exploded view" loading="lazy">
-            </div>
-
-
-
         </article>
+        
         <article class="card project">
           <h3>Personal Portfolio Website</h3>
-          <p class="muted">Accessible, responsive site to showcase projects and skills.</p>
+          <p class="muted">Coded and deployed an accessible, responsive site to showcase projects, skills, and personality.</p>
           <p class="stack">HTML • CSS • GitHub Pages</p>
-          <p><a href="#">Live</a> · <a href="#">Repo</a></p>
+          <!-- <p><a href="#">Live</a> · <a href="#">Repo</a></p> -->
         </article>
+        <!-- gallery card -->
+        <div class="card gallery-card is-hidden" id="gallery-matcha" role="region">
+          <div class="gallery-grid">
+            <img src="resources/images/matcha/scenic_photo_1.jpg" alt="scenic project image" loading="lazy">
+            <img src="resources/images/matcha/scenic_photo_2.jpg" alt="scenic project image 2" loading="lazy">
+            <img src="resources/images/matcha/internals.jpg" alt="internals and battery" loading="lazy">
+            <img src="resources/images/matcha/circuit.jpg" alt="circuit design" loading="lazy">
+          </div>
+        </div>
         <!-- <article class="card project">
           <h3>EE Mini-Builds (Ongoing)</h3>
           <p class="muted">Small experiments (PWM dimmer, PID motor control, buck sim) with measurements.</p>
@@ -132,7 +142,7 @@
 
     <!-- EXPERIENCE -->
     <section id="experience" class="section tight" aria-labelledby="exp-title">
-      <h2 id="exp-title">Experience test</h2>
+      <h2 id="exp-title">Work Experience</h2>
       <div class="grid cols-2">
         <article class="card">
           <h3>Engineering Intern — Prince Rupert Port Authority</h3>
@@ -143,16 +153,45 @@
             <li>Created AutoCAD berm designs from LiDAR, including volume & cost estimates.</li>
             <li>Authored project docs and a closing report shared with internal & external stakeholders.</li>
           </ul>
+          <div class="links">
+            <a class="link-btn" href="rielp.html" target="_blank" rel="noopener">
+              AutoCad
+            </a>
+            <span aria-hidden="true">·</span>
+            <button class="link-btn gallery-toggle" type="button" aria-expanded="false"aria-controls="gallery-rielp">
+              Images
+            </button>
+          </div>
         </article>
 
         <article class="card">
           <h3>Founder / Instructor — Skeena Tutoring</h3>
           <p class="muted tight-top">Prince Rupert, BC · Jun 2024–Present</p>
           <ul class="muted list">
-            <li>Built a student-run tutoring initiative (“Students Helping Students”).</li>
+            <li>Built a student-run tutoring initiative to address the lack of academic support in the small community of Prince Rupert.</li>
             <li>Managed website, scheduling, payments; delivered 250+ hours of math/science tutoring.</li>
+            <li>Designed and maintained a website and social media presence, promoting "Students Helping Students."</li>
           </ul>
+          <div class="links" id="skeena">
+            <a href="https://skeenatutoring.com" target="_blank" rel="noopener">Website</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.facebook.com/p/Skeena-Tutoring-100094177103720" target="_blank" rel="noopener">Facebook</a>
+          </div>
         </article>
+
+        <div class="card gallery-card is-hidden" id="gallery-rielp" role="region">
+          <div class="gallery-grid">
+            <img src="resources/images/rielp/site_headshot.jpg" alt="headshot of ansh on RIELP site" loading="lazy">
+            <img src="resources/images/rielp/rielp_scenic_2.jpg" alt="scenic project image" loading="lazy">
+            <img src="resources/images/rielp/rielp_scenic.JPG" alt="scenic project image " loading="lazy">
+            <img src="resources/images/rielp/site_a.JPG" alt="structure A" loading="lazy">
+            <img src="resources/images/rielp/site_c.JPG" alt="structure C" loading="lazy">
+            <img src="resources/images/rielp/site_intertidal.jpeg" alt="intertidal salt marsh" loading="lazy">
+            <img src="resources/images/rielp/site_watermain.JPG" alt="watermain" loading="lazy">
+            <img src="resources/images/rielp/site_drainage.JPG" alt="drainage pipe" loading="lazy">
+            <img src="resources/images/rielp/site_drill.JPG" alt="rock breaker" loading="lazy">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -180,7 +219,9 @@
         </div>
       </div>
     </section>
-
+    <section id="download-center" class="container" aria-labelledby="download-link">
+      <a id="download-link" class="btn" href="resources/files/Resume-Ansh-Chugh-2025.docx" download="Ansh-Chugh-Resume.docx">Download My Resume</a>
+    </section>
     <!-- CONTACT -->
     <section id="contact" class="section tight" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
@@ -198,7 +239,7 @@
     <small class="muted">© <span id="y"></span> Ansh Chugh — This Website was built from scratch by Ansh Chugh and deployed using GitHub</small>
   </footer>
 
-  <script>
+<script>
 /*
   Solid background switcher:
   - Anchors the switch near the #projects section (half a viewport before it)
@@ -230,7 +271,7 @@
     const top = target.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
     // Switch when the top of the target is ~half a viewport away,
     // but never earlier than MIN_SCROLL_PX
-    switchY = Math.max(top - viewH() * 0.5, MIN_SCROLL_PX);
+    switchY = Math.max(top - viewH() * 0.65, MIN_SCROLL_PX);
   }
 
   function tick() {
@@ -274,8 +315,34 @@
     document.addEventListener('DOMContentLoaded', init, { once: true });
   }
 })();
-    </script>
+
+  // Toggle any gallery panel opened by a .gallery-toggle button
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.gallery-toggle');
+    if (!btn) return;
+
+    const panelId = btn.getAttribute('aria-controls');
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    // If you want only one open at a time, close others:
+    document.querySelectorAll('.gallery-toggle[aria-expanded="true"]').forEach(otherBtn => {
+      if (otherBtn !== btn) {
+        const otherPanel = document.getElementById(otherBtn.getAttribute('aria-controls'));
+        if (otherPanel) otherPanel.classList.add('is-hidden');
+        otherBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Toggle this one
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    panel.classList.toggle('is-hidden', isOpen);
+
+  });
+
+</script>
 
 </body>
 </html>
-
